@@ -4,23 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
+    
+    <style>
+      /* Fondo del sitio */
+        body {
+            background: url('img/signIn.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Card transparente */
+        .card {
+            background-color: rgba(255, 255, 255, 0.85); /* blanco semi-transparente */
+        }
+
+        /* Botón color navbar */
+        .btn-dark {
+            background-color: #212529; /* mismo color que bg-dark */
+            border-color: #212529;
+        }
+
+        .btn-dark:hover {
+            background-color: #343a40; /* un poco más claro al pasar el mouse */
+            border-color: #343a40;
+        }
+    </style>
+    </head>
+
     <title>Laboratorio 3</title>
-</head>
-<nav class="navbar bg-light">
+
+<nav class="navbar bg-dark"></nav>
+  <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="img/logo.png" alt="FCA" height="24" class="d-inline-block align-text-top">
+      <!-- Imagen comentada -->
+        <!-- <img src="img/signIn.png" class="card-img-top img-fluid mb-3" alt="Sign In"> -->
       Informática
     </a>
   </div>
 </nav>
+
 <body>
     <main>
       <div class="d-flex justify-content-md-center align-items-center vh-100">
         <div class="card p-4">
-          <img src="img/signIn.png" class="card-img-top img-fluid" style="width:25vw;">
           <div class="card-body">
             <h5 class="card-title">Welcome</h5>
+            <p class="text-center text-muted mb-4">
+            Por favor, llena todos los datos para registrarte.
+            </p>
+
             <div class="mb-3">
               <label for="email" class="form-label">Email address</label>
               <input type="email" class="form-control" id="email" placeholder="name@example.com">
@@ -30,7 +62,33 @@
               <input type="password" class="form-control" id="password">
             </div>
             <div>
-              <button class="btn btn-outline-dark" type="submit">SignIn</button>
+            <label for="passwordRepeat" class="form-label">Repeat password</label>
+              <input type="password" class="form-control" id="passwordRepeat">
+            </div>
+
+            <div class="mb-3">
+              <label for="userName" class="form-label">Usuario</label>
+              <input type="text" class="form-control" id="userName" placeholder="elBarto666">
+            </div>
+            
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input type="tel" class="form-control" id="phone" placeholder="5510101010">
+            </div>
+            
+            <div class="mb-3">
+              <label for="userType" class="form-label">User Type</label>
+              <select class="form-select" aria-label="Tipo_de_usuario" id="userType">
+              <option selected disabled>Seleccionar</option>
+              <option value="1">Alumno</option>
+              <option value="2">Profesor</option>
+              <option value="3">Epleado</option>
+              </select>
+            </div>
+
+
+            <div>
+              <button class="btn btn-outline-dark" type="submit">Sign Up</button>
             </div>
           </div>
         </div>

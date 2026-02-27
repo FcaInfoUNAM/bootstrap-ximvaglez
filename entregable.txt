@@ -1,0 +1,26 @@
+Explica en entregable.txt qué es lo que hace bg-dark y escribe el color hexadecimal del fondo del navbar
+- bg-dark es una clase utilitaria(sólo funciona para una cosa en específica) de Bootstrap, la cual aplica un color de fondo oscuro
+y forma parte del sistema de colores predefinidos del framework.
+Color hexadecimal de bg-dark: #212529
+
+Responde en entregable.txt ¿qué es lo que permite que en el formulario la contraseña esté oculta?
+- input type="password"-> el atributo type="password" en el elemento <input> permite que que la contraseña esté oculta.
+Cuando se utiliza type="password", el navegador automáticamente reemplaza los caracteres por puntos o asterisco para ocultar 
+la contraseña. 
+
+¿Dónde deberías agregar CSS en el documento si modificas el estilo de algúna clase? 
+- Para cambiar el estilo se puede hacer dentro de las etiquetas <style></style> en el head. 
+Este es un archivo CSS interno.
+
+
+¿Bootstrap incorpora algún mecanismo para realizar los cambios del paso 4?
+- Sí, para clases como bg-dark y btn-dark para colores, clases de opacidad (bg-opacity) para transparencia parcial.
+Pero la transparencia exacta del card y color preciso del botón requieren CSS personalizado. 
+
+ ¿Cómo cambiarias el fondo por un video?
+ - Se reemplaza background del body con un <video> en posición fija y z-index: -1:
+
+ <video autoplay muted loop style="position: fixed; top:0; left:0; width:100%; height:100%; object-fit: cover; z-index:-1;">
+  <source src="videos/fondo.mp4" type="video/mp4">
+</video>
+
